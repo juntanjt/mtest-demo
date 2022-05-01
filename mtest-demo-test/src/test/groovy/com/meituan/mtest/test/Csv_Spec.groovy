@@ -15,7 +15,7 @@ class Csv_Spec extends Specification {
 
     def "csv2java"() {
         given:
-        InputStream io = new ClassPathResource("mtest-data/UserService-getUserById/testcase.csv").getInputStream()
+        InputStream io = new ClassPathResource("mtest-data/OrderService-createOder/testcase.csv").getInputStream()
 
         when:
         CSVReader csvReader = new CSVReaderBuilder(new InputStreamReader(io)).build();
