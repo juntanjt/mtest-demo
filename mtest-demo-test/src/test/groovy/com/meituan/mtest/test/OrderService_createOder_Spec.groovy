@@ -50,7 +50,7 @@ class OrderService_createOder_Spec extends MTestBaseCase {
     @Override
     MockMethod[] getMockMethods() {
         return [
-                new MockMethod(ItemService.class.getMethod('queryItemById', Long.class), ItemService.class, 'itemService')
+                new MockMethod(ItemService.class, ItemService.class.getMethod('queryItemById', Long.class), 'itemService')
         ]
     }
 
