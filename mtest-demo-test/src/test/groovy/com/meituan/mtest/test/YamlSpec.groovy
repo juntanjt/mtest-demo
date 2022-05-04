@@ -13,14 +13,14 @@ import spock.lang.Specification
  *
  * @author Jun Tan
  */
-class Yaml_Spec extends Specification {
+class YamlSpec extends Specification {
 
     def "java2yaml"() {
         given:
         def yaml = new Yaml()
 
         and:
-        def itemDTO = new ItemDTO(itemId:33333, itemName:"农夫山泉", amount:1.5)
+        def itemDTO = new ItemDTO(itemId:33333, itemName:"农夫山泉", price: 1.5)
 
         def orderDO = new OrderDO(id:111, userId:2222, itemId:33333, itemCount:2, amount:3.0, orderName:"农夫山泉", address:"上海", telephone:"13000000000", createTime:new Date())
 

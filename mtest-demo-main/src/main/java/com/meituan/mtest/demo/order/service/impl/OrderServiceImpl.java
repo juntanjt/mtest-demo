@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
         orderDO.setItemId(orderReqDTO.getItemId());
         orderDO.setItemCount(orderReqDTO.getItemCount());
         // amount
-        orderDO.setAmount(itemDTO.getAmount().multiply(BigDecimal.valueOf(orderReqDTO.getItemCount())));
+        orderDO.setAmount(itemDTO.getPrice().multiply(BigDecimal.valueOf(orderReqDTO.getItemCount())));
         orderDO.setOrderName(itemDTO.getItemName());
         orderDO.setAddress(orderReqDTO.getAddress());
         orderDO.setTelephone(orderReqDTO.getTelephone());

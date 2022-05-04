@@ -17,12 +17,12 @@ import javax.annotation.Resource
  *
  * @author Jun Tan
  */
-@ContextConfiguration(classes = [OrderService_createOder_Spec.class])
+@ContextConfiguration(classes = [OrderServiceCreateOderSpec.class])
 @ComponentScan("com.meituan.mtest.demo.order")
 @ImportResource("classpath:spring-test-context.xml")
 @Configuration
 @MTest(testClass = OrderService.class, method = "createOder")
-class OrderService_createOder_Spec extends MTestBaseCase {
+class OrderServiceCreateOderSpec extends MTestBaseCase {
 
     @Resource
     OrderService orderService
