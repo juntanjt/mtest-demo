@@ -2,7 +2,7 @@ package com.meituan.mtest.demo.order.service;
 
 import com.meituan.mtest.demo.order.service.dto.OrderDTO;
 import com.meituan.mtest.demo.order.service.dto.OrderReqDTO;
-import com.meituan.mtest.demo.ResultDTO;
+import com.meituan.mtest.demo.order.service.dto.ResultDTO;
 
 public interface OrderService {
 

@@ -1,4 +1,4 @@
-package com.meituan.mtest.demo;
+package com.meituan.mtest.demo.order.service.dto;
 
 import lombok.Data;
 

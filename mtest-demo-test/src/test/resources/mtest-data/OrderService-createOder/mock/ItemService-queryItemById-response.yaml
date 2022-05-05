@@ -3,3 +3,6 @@ case_id_111: !!com.meituan.mtest.demo.item.service.dto.ItemDTO
 
 case_id_222: !!com.meituan.mtest.demo.item.service.dto.ItemDTO
   {itemId: 4444, price: 1, itemName: 哇哈哈}
+
+case_id_999:
+  null

@@ -2,12 +2,13 @@ package com.meituan.mtest.demo.order.service.impl;
 
 import com.meituan.mtest.demo.item.service.ItemService;
 import com.meituan.mtest.demo.item.service.dto.ItemDTO;
+import com.meituan.mtest.demo.order.OrderException;
 import com.meituan.mtest.demo.order.dao.OrderDAO;
 import com.meituan.mtest.demo.order.dao.OrderDO;
 import com.meituan.mtest.demo.order.service.OrderService;
 import com.meituan.mtest.demo.order.service.dto.OrderDTO;
 import com.meituan.mtest.demo.order.service.dto.OrderReqDTO;
-import com.meituan.mtest.demo.ResultDTO;
+import com.meituan.mtest.demo.order.service.dto.ResultDTO;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -24,6 +25,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public ResultDTO<Long> createOrder(Long userId, OrderReqDTO orderReqDTO) {
         ItemDTO itemDTO = itemService.queryItemById(orderReqDTO.getItemId());
+
+        if (itemDTO==null) {
+            throw new OrderException(OrderException.ITEM_NOT_EXIST, "item is not exists, itemId="+orderReqDTO.getItemId());
+        }
 
         OrderDO orderDO = new OrderDO();
         orderDO.setUserId(userId);

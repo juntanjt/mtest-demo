@@ -4,7 +4,7 @@ import com.meituan.mtest.demo.item.service.dto.ItemDTO
 import com.meituan.mtest.demo.order.dao.OrderDO
 import com.meituan.mtest.demo.order.service.dto.OrderDTO
 import com.meituan.mtest.demo.order.service.dto.OrderReqDTO
-import com.meituan.mtest.demo.ResultDTO
+import com.meituan.mtest.demo.order.service.dto.ResultDTO
 import org.assertj.core.util.Maps
 import org.yaml.snakeyaml.Yaml
 import spock.lang.Specification

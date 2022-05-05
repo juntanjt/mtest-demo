@@ -3,6 +3,7 @@ package com.meituan.mtest.test
 import com.meituan.mtest.MTest
 import com.meituan.mtest.MTestBaseCase
 import com.meituan.mtest.MockMethod
+import com.meituan.mtest.TestCase
 import com.meituan.mtest.demo.item.service.ItemService
 import com.meituan.mtest.demo.order.service.OrderService
 import org.springframework.context.annotation.ComponentScan
@@ -44,6 +45,26 @@ class OrderServiceCreateOderSpec extends MTestBaseCase {
         testcase << testCase()
         [userId, orderReqDTO] << request()
         expected << expected()
+
+    }
+
+    @Unroll
+    def "#testcase exception"() {
+        given: ""
+
+        when: ""
+        def response = orderService.createOrder(userId, orderReqDTO)
+
+        then: ""
+        def exception = thrown(expectedException.class)
+        with(exception) {
+            errorCode == expectedException.errorCode
+        }
+
+        where: ""
+        testcase << testCase(TestCase.EXCEPTION)
+        [userId, orderReqDTO] << request(TestCase.EXCEPTION)
+        expectedException << expectedException()
 
     }
 
