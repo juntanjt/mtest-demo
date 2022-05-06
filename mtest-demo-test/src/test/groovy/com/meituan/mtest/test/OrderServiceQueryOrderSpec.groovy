@@ -20,9 +20,6 @@ import javax.annotation.Resource
 @ComponentScan("com.meituan.mtest.demo.order")
 @ImportResource("classpath:spring-test-context.xml")
 @Configuration
-//@RunWith(PowerMockRunner.class)
-//@PowerMockRunnerDelegate(JUnitPlatform.class)
-//@PrepareForTest([DateUtils.class])
 @MTest(testClass = OrderService.class, method = "queryOrder")
 class OrderServiceQueryOrderSpec extends MTestBaseCase {
 
