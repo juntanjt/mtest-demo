@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class ResultDTO<T> {
 
-    private boolean success;
+    private Boolean success;
     private T value;
     private String errorCode;
     private String errorMessage;
